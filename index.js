@@ -1,10 +1,20 @@
-const express = require('express');
+import express from 'express';
+import dotenv from 'dotenv';
+
+import { conectarDB } from './config/db.js';
+
 const app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello World');
-});
+//variables de entorno
+dotenv.config();
 
-app.listen(3000, () => {
-    console.log('corriendo en el puerto 3000');
+//conexion con la base de datos
+conectarDB();
+
+//PUERTO
+const port = process.env.PORT || 4000;
+
+//corremos el servidor
+app.listen(port, () => {
+    console.log(`corriendo en el puerto ${port}`);
 });

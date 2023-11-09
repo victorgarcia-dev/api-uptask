@@ -2,6 +2,7 @@
   "name": "api-uptask",
   "version": "1.0.0",
   "description": "administrador de tareas",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/victorgarcia-dev/api-uptask#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

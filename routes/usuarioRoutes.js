@@ -1,7 +1,7 @@
 import express from 'express';
+import { confirmar } from '../controllers/usuarioController.js';
 
-export const routerUser = express.Router();
+export const router = express.Router();
 
-routerUser.get('/', ( req, res ) => {
-    res.send("get api-usuarios");
-});
+//autenticación, registro y confirmación de usuarios
+router.post('/', confirmar)
